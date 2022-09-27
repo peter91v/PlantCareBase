@@ -38,6 +38,13 @@ if [ "$CONT" = "y" ]; then
    
     cd ..
     bin/buildout
+    sudo apt install mariadb-server
+    sudo apt-get install libmariadbclient-dev
+    sudo pip3 install adafruit-circuitpython-mcp3xxx
+
+    bin/pip3 install mysql-connector
+    sudo apt install mysql_secure_installation
+    bin/pip3 install RPi.gpio
     exec bash
 elsesvn up
     echo "cancel install Python / Plone"
