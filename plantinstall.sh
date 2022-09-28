@@ -14,6 +14,7 @@ if [ "$CONT" = "y" ]; then
 	sudo apt-get install libssl-dev
 	sudo apt-get install libbz2-dev
 	sudo apt-get install readline-dev  
+	sudo apt-get install libffi-dev
 	cd /home/pi/Plant_Care
         mkdir temp
         cd temp
@@ -40,11 +41,12 @@ if [ "$CONT" = "y" ]; then
     bin/buildout
     sudo apt install mariadb-server
     sudo apt-get install libmariadbclient-dev
-    sudo pip3 install adafruit-circuitpython-mcp3xxx
-
-    bin/pip3 install mysql-connector
-    sudo apt install mysql_secure_installation
+    bin/pip3 install adafruit-circuitpython-mcp3xxx
     bin/pip3 install RPi.gpio
+    bin/pip3 install mysql-connector-python==8.0.29
+
+    sudo mysql_secure_installation
+    
     exec bash
 elsesvn up
     echo "cancel install Python / Plone"
