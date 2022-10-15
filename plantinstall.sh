@@ -44,9 +44,9 @@ if [ "$CONT" = "y" ]; then
     bin/pip3 install adafruit-circuitpython-mcp3xxx
     bin/pip3 install RPi.gpio
     bin/pip3 install mysql-connector-python==8.0.29
-
+    bin/pip3 install paho-mqtt
     sudo mysql_secure_installation
-    
+    sudo apt install mosquitto mosquitto-clients
     exec bash
 elsesvn up
     echo "cancel install Python / Plone"
