@@ -9,6 +9,8 @@ if [ "$CONT" = "y" ]; then
         echo "$Python38 already installed"
         # exit
     else
+   	sudo apt-get install gcc
+    	sudo apt-get install make
 	sudo apt-get install python-dev
 	sudo apt-get install openssl
 	sudo apt-get install libssl-dev
