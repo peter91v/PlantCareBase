@@ -41,6 +41,7 @@ if [ "$CONT" = "y" ]; then
     bin/pip3 install RPi.gpio
     bin/pip3 install mysql-connector-python==8.0.29
     bin/pip3 install paho-mqtt
+    bin/pip install requests
     cp ~/Plant_Care/buildout.cfg ~/Plant_Care/Zope
     mkdir src
     cd src
