@@ -18,10 +18,8 @@ if [ "$CONT" = "y" ]; then
 	sudo apt-get install libreadline-dev  
 	sudo apt-get install libffi-dev
 	sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev
-    	sudo mysql_secure_installation
   	sudo apt install mosquitto mosquitto-clients
-	sudo apt install mariadb-server
-	sudo apt-get install libmariadbclient-dev
+
 	cd ~/Plant_Care
         mkdir temp
         cd temp
@@ -51,6 +49,10 @@ if [ "$CONT" = "y" ]; then
    
     cd ..
     bin/buildout
+    sudo apt install mariadb-server
+    sudo apt-get install libmariadbclient-dev
+    sudo mysql_secure_installation
+
     exec bash
 elsesvn up
     echo "cancel install Python / Plone"
